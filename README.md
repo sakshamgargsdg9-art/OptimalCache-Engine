@@ -9,10 +9,10 @@ argmax(next_use(x)), achieving the theoretical minimum cache misses and serving 
  
                               1 : cd $PIN_ROOT/CacheSimulator
                               2 : g++ test_cache.cpp -o test_cache
+                              
                               3 : $PIN_ROOT/pin \-t $PIN_ROOT/source/tools/ManualExamples/obj-intel64/mytrace.so \-- ./test_cache
 
 
-                              
                               4 : g++ cache_sim_lru.cpp -o lru
                               5:./lru
                               6 : g++ belady_sim.cpp -o belady

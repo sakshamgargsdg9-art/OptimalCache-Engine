@@ -5,7 +5,8 @@ argmax(next_use(𝑥))
 argmax(next_use(x)), achieving the theoretical minimum cache misses and serving as a benchmark for optimality; overall, OpticalCacheEngine bridges the gap between theoretical models and practical system design, making it a powerful tool for exploring cache behavior in operating systems, CPU memory hierarchies, and performance engineering, while remaining extensible for future enhancements such as additional eviction policies, multi-level cache simulation, and intelligent predictive caching strategies.
 
 
- ------------------------------------------------RUNNING PROCESS---------------------------------------------------------------
+ ------------------------------------------------RUNNING PROCESS-------------------------------------------------------------
+ 
                               1 : cd $PIN_ROOT/CacheSimulator
                               2 : g++ test_cache.cpp -o test_cache
                               3 : $PIN_ROOT/pin \

@@ -7,6 +7,7 @@
 #include <iomanip>
 #include <unordered_map>
 #include <queue>
+#include <chrono>
 
 using namespace std;
 
@@ -111,8 +112,48 @@ int main() {
         }
     }
 
-    cout << "--- Belady's Optimal Results ---" << endl;
-    cout << "Hits: " << hits << " | Misses: " << misses << endl;
-    cout << fixed << setprecision(2) << "Hit Rate: " << ((double)hits/trace_list.size())*100 << "%" << endl;
+    double hit_rate = (double)hits * 100.0 / trace_list.size();
+double miss_rate = (double)misses * 100.0 / trace_list.size();
+
+cout << "\n";
+cout << "==============================================================\n";
+cout << "           CACHE MEMORY SIMULATOR - BELADY'S OPTIMAL\n";
+cout << "==============================================================\n\n";
+
+cout << "Input Trace File\n";
+cout << "--------------------------------------------------------------\n";
+cout << "File Name          : trace_2024CSB1118.out\n\n";
+
+cout << "Cache Configuration\n";
+cout << "--------------------------------------------------------------\n";
+cout << left << setw(22) << "Replacement Policy"
+     << ": Belady's Optimal\n";
+cout << left << setw(22) << "Cache Size"
+     << ": " << CACHE_SIZE / 1024 << " KB\n";
+cout << left << setw(22) << "Block Size"
+     << ": " << BLOCK_SIZE << " Bytes\n";
+cout << left << setw(22) << "Associativity"
+     << ": " << ASSOCIATIVITY << "-Way Set Associative\n";
+cout << left << setw(22) << "Number of Sets"
+     << ": " << num_sets << "\n\n";
+
+cout << "Simulation Results\n";
+cout << "--------------------------------------------------------------\n";
+cout << left << setw(22) << "Total Accesses"
+     << ": " << trace_list.size() << "\n";
+cout << left << setw(22) << "Cache Hits"
+     << ": " << hits << "\n";
+cout << left << setw(22) << "Cache Misses"
+     << ": " << misses << "\n";
+
+cout << fixed << setprecision(2);
+cout << left << setw(22) << "Hit Rate"
+     << ": " << hit_rate << " %\n";
+cout << left << setw(22) << "Miss Rate"
+     << ": " << miss_rate << " %\n";
+
+cout << "\n==============================================================\n";
+cout << "Simulation Completed Successfully\n";
+cout << "==============================================================\n";
     return 0;
 }

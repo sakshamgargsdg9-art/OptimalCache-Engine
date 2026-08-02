@@ -17,5 +17,5 @@ argmax(next_use(x)), achieving the theoretical minimum cache misses and serving 
                               5:./lru
                               6 : g++ belady_sim.cpp -o belady
                               7 : ./belady
-
+                              8 : head -n 20 trace_2024CSB1118.out
 -------------------------------------------------------THANKS----------------------------------------------------------------
